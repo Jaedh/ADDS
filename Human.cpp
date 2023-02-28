@@ -10,8 +10,13 @@ Human::Human(std::string _name){
 }
 
 char Human::makeMove(){
-    std::cout<<"Enter move: ";
-    std::cin>>move;
+    while(true){
+        std::cout<<"Enter move: ";        
+        std::cin>>move;
+        if(move=='r' || move=='s' || move=='p'){
+            break;
+        }
+    }
     return move;
 }
 
