@@ -3,6 +3,7 @@
 
 #include "Computer.h"
 #include "Human.h"
+#include "Referee.h"
 
 int main(void){
     Computer *test1 = new Computer;
@@ -11,11 +12,7 @@ int main(void){
     Human *test3 = new Human;
     Human test4("kok");
 
-
-    std::cout<<test3->getName()<<std::endl;
-    std::cout<<test4.getName()<<std::endl;
-
-    std::cout<<test3->makeMove()<<std::endl;
-    std::cout<<test4.makeMove()<<std::endl;
+    Referee* r = new Referee;
+    std::cout<<r->refGame(test1, test3)->getName()<<std::endl;
 
 }

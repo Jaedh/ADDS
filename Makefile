@@ -1,2 +1,2 @@
-test: main.cpp Computer.cpp	Human.cpp
-	g++ main.cpp Computer.cpp Human.cpp
+test: main.cpp Computer.cpp	Human.cpp Referee.cpp
+	g++ main.cpp Computer.cpp Human.cpp Referee.cpp
