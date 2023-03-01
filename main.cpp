@@ -6,10 +6,10 @@
 #include "Referee.h"
 
 int main(void){
-    Computer *test1 = new Computer;
+    Player *test1 = new Computer;
     Computer test2("jaedh");
 
-    Human *test3 = new Human;
+    Player *test3 = new Human;
     Human test4("kok");
 
     Referee* r = new Referee;
