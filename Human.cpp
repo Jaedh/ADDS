@@ -13,7 +13,7 @@ char Human::makeMove(){
     while(true){
         std::cout<<"Enter move: ";        
         std::cin>>move;
-        if(move=='r' || move=='s' || move=='p'){
+        if(move=='R' || move=='R' || move=='R'){
             break;
         }
     }
