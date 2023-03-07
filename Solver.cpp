@@ -16,11 +16,14 @@ Solver::Solver(Move* _player1, Move* _player2){
 }
 
 bool Solver::Solve(){
-    std::vector<std::string> temp = win[player1->getName()];
-    if(std::find(temp.begin(), temp.end(), player2->getName()) != temp.end()){
-        return false;
+    std::vector<std::string> temp = win[player1->getMoves()[0]];
+
+    for(auto& i: player2->getMoves()){
+        if(std::find(temp.begin(), temp.end(), i) != temp.end()){
+            return true;
+        }
     }
-    return true;
+    return false;
 }
 
 Solver::~Solver(){

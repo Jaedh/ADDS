@@ -10,7 +10,7 @@ Computer::Computer(std::string _name){
 }
 
 Move* Computer::makeMove(){
-    Move* move = new Move("Rock");
+    Move* move = new Move("Rock", "Robot");
     return move;
 }
 
