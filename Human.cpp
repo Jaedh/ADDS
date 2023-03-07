@@ -9,14 +9,10 @@ Human::Human(std::string _name){
     name = _name;
 }
 
-char Human::makeMove(){
-    // while(true){
-        std::cout<<"Enter move: ";        
-        std::cin>>move;
-    //     if(move=='R' || move=='R' || move=='R'){
-    //         break;
-    //     }
-    // }
+Move* Human::makeMove(){
+    std::cout<<"Enter move: ";        
+    std::cin>>string_move;
+    Move* move = new Move(string_move);
     return move;
 }
 

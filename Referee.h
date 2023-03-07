@@ -5,15 +5,16 @@
 #include "Player.h"
 #include "Human.h"
 #include "Computer.h"
+#include "Move.h"
 
 class Referee{
     private:
-        char player1_move;
-        char player2_move;
+        Move*  player1_move;
+        Move*  player2_move;
     public:
-    Referee(); 
-    Player * refGame(Player * player1, Player * player2);
-    ~Referee();
+        Referee(); 
+        Player* refGame(Player * player1, Player * player2);
+        ~Referee();
 };
 
 #endif

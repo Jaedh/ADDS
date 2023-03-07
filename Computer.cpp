@@ -9,8 +9,9 @@ Computer::Computer(std::string _name){
     name = _name;
 }
 
-char Computer::makeMove(){
-    return 'R';
+Move* Computer::makeMove(){
+    Move* move = new Move("Rock");
+    return move;
 }
 
 std::string Computer::getName(){

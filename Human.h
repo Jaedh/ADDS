@@ -6,11 +6,11 @@
 
 class Human : public Player{
     private:
-        char move;
+        std::string string_move;
     public:
         Human();
         Human(std::string _name);
-        char makeMove();
+        Move* makeMove();
         std::string getName();  
         ~Human();
 };
