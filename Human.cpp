@@ -10,7 +10,7 @@ Human::Human(std::string _name){
 }
 
 Move* Human::makeMove(){
-    std::cout<<"Enter move: ";        
+    // std::cout<<"Enter move: ";        
     std::cin>>string_move;
     Move* move = new Move(string_move);
     return move;

@@ -9,7 +9,7 @@ Move::Move(std::string _string_move){
 Move::Move(std::string move1, std::string move2){
     moves.push_back(move1);
     moves.push_back(move2);
-    move = move2;
+    move = move1;
 }
 
 void Move::setName(std::string _move){
