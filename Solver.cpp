@@ -8,7 +8,6 @@ Solver::Solver(Move* _player1, Move* _player2){
     win["Rock"] = {"Paper"};
     win["Paper"] = {"Scissors"};
     win["Scissors"] = {"Rock"};
-    win["Paper"] = {"Scissor"};
     win["Scissor"] = {"Rock"};
     win["Monkey"] = {"Zombie", "Pirate"};
     win["Robot"] = {"Pirate", "Monkey"};
