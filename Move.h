@@ -12,6 +12,7 @@ class Move{
         Move(std::string _string_move);
         Move(std::string move1, std::string move2);
         std::string getName();
+        void setName(std::string _move);
         std::vector<std::string> getMoves();
         ~Move();
 };
