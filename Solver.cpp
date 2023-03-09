@@ -6,7 +6,7 @@ Solver::Solver(Move* _player1, Move* _player2){
     player1 = _player1;
     player2 = _player2;
     win["Rock"] = {"Paper"};
-    win["Paper"] = {"Scissors"};
+    win["Paper"] = {"Scissors", "Scissor"};
     win["Scissors"] = {"Rock"};
     win["Scissor"] = {"Rock"};
     win["Monkey"] = {"Zombie", "Pirate"};
