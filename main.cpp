@@ -13,6 +13,6 @@ int main(void){
     Human test4("kok");
 
     Referee* r = new Referee;
-    std::cout<<r->refGame(&test4, test3)->getName()<<std::endl;
+    std::cout<<r->refGame(test3, test1)->getName()<<std::endl;
 
 }

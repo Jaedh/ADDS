@@ -21,10 +21,10 @@ bool Solver::Solve(){
     for(auto& i: player2->getMoves()){
         if(std::find(temp.begin(), temp.end(), i) != temp.end()){
             player2->setName(i);
-            return true;
+            return false;
         }
     }
-    return false;
+    return true;
 }
 
 Solver::~Solver(){
