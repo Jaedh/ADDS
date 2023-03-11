@@ -10,7 +10,7 @@ void Move::setName(std::string _name){
 }
 
 std::string Move::getName(){
-    return last_move;
+    return move_name[0];
 }
 
 std::vector<std::string> Move::getMove(){
