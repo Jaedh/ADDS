@@ -1,2 +1,2 @@
-test: main.cpp Computer.cpp	Human.cpp Referee.cpp Move.cpp Solver.cpp
-	g++ main.cpp Computer.cpp Human.cpp Referee.cpp Move.cpp Solver.cpp
+test: main.cpp Computer.cpp	Human.cpp Referee.cpp Move.cpp MakeMove.cpp Monkey.cpp Rock.cpp Paper.cpp Scissors.cpp Zombie.cpp Robot.cpp Pirate.cpp Ninja.cpp
+	g++ main.cpp Computer.cpp Human.cpp Referee.cpp Move.cpp MakeMove.cpp Monkey.cpp Rock.cpp Paper.cpp Scissors.cpp Zombie.cpp Robot.cpp Pirate.cpp Ninja.cpp

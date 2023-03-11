@@ -5,15 +5,16 @@
 #include <vector>
 
 class Move{
-    private:
-        std::vector<std::string> moves;
-        std::string move;
+    protected:
+        std::string move_name;
+        std::vector<std::string> win_conditions;
+        std::vector<std::string> loss_conditions;
     public:
-        Move(std::string _string_move);
-        Move(std::string move1, std::string move2);
+        Move();
         std::string getName();
-        void setName(std::string _move);
-        std::vector<std::string> getMoves();
+        std::string getMove();
+        std::vector<std::string> getWin();
+        std::vector<std::string> getLoss();
         ~Move();
 };
 

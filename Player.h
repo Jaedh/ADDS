@@ -2,12 +2,15 @@
 #define PLAYER_H
 
 #include <iostream>
+#include <vector>
 #include "Move.h"
+#include "MakeMove.h"
 
 class Player{
     protected:
         std::string name;
-        Move* move;        
+        std::vector<Move*> moves;
+        MakeMove* tool;
     public:
         virtual Move* makeMove() = 0;
         virtual std::string getName() = 0;      
