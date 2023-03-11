@@ -10,6 +10,7 @@
 #include "Ninja.h"
 #include "Pirate.h"
 #include "Zombie.h"
+#include "Default.h"
 
 class MakeMove{
     private:

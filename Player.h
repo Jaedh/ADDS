@@ -10,7 +10,7 @@ class Player{
     protected:
         std::string name;
         std::vector<Move*> moves;
-        MakeMove* tool;
+        // MakeMove* tool;
     public:
         virtual Move* makeMove() = 0;
         virtual std::string getName() = 0;      

@@ -3,18 +3,18 @@
 
 Human::Human(){
     name = "Human";
-    MakeMove* tool = new MakeMove();
 }
 
 Human::Human(std::string _name){
     name = _name;
-    MakeMove* tool = new MakeMove();
 }
 
 Move* Human::makeMove(){
     std::cout<<"Enter move: ";        
     std::cin>>string_move;
-    moves.push_back(tool->moveObject(string_move));    
+    MakeMove* tool = new MakeMove();
+    Move* temp = tool->moveObject(string_move);
+    moves.push_back(temp);    
     return moves.back();
 }
 

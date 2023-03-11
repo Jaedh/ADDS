@@ -6,10 +6,10 @@ Move::Move(){
 }
 
 std::string Move::getName(){
-    return getMove();
+    return move_name.back();
 }
 
-std::string Move::getMove(){
+std::vector<std::string> Move::getMove(){
     return move_name;
 }
 

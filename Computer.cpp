@@ -3,20 +3,17 @@
 
 Computer::Computer(){
     name = "Computer";
-    MakeMove* tool = new MakeMove();
-    moves.push_back(tool->moveObject("Rock"));
-    moves.push_back(tool->moveObject("Robot"));    
 }
 
 Computer::Computer(std::string _name){
     name = _name;
-    MakeMove* tool = new MakeMove();
-    moves.push_back(tool->moveObject("Rock"));
-    moves.push_back(tool->moveObject("Robot"));    
 }
 
 Move* Computer::makeMove(){
-    return moves[0];
+    MakeMove* tool = new MakeMove();  
+    Move* temp = tool->moveObject("Default");
+    moves.push_back(temp);       
+    return moves.back();
 }
 
 std::string Computer::getName(){
