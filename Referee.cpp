@@ -21,6 +21,8 @@ Player* Referee::refGame(Player * player1, Player * player2){
     for(auto& i: player1_move->getWin()){
         for(auto& j: player2_move->getMove()){
             if(i==j){
+                player1_move->setName(i);
+                player2_move->setName(j);
                 return player1;
             }
         }

@@ -5,8 +5,12 @@ Move::Move(){
 
 }
 
+void Move::setName(std::string _name){
+    last_move = _name;
+}
+
 std::string Move::getName(){
-    return move_name.back();
+    return last_move;
 }
 
 std::vector<std::string> Move::getMove(){
