@@ -1,0 +1,13 @@
+#ifndef TRUCKLOADS_H
+#define TRUCKLOADS_H
+
+class Truckloads{
+    private:
+
+    public:
+        Truckloads();
+        int numTrucks(int)
+        ~Truckloads();
+};
+
+#endif
