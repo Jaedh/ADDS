@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Reverser.h"
 #include "Truckloads.h"
+#include "EfficientTruckloads.h"
 
 int main(void){
     Reverser* r = new Reverser();
@@ -10,4 +11,7 @@ int main(void){
 
     Truckloads* truck = new Truckloads();
     std::cout<<truck->numTrucks(1024,5)<<std::endl;
+
+    EfficientTruckLoads* ef = new EfficientTruckLoads();
+    std::cout<<ef->numTrucks(1024,5)<<std::endl;
 }
