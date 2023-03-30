@@ -7,13 +7,13 @@
         vector<int> result;
         size_t temp;
 
-        result.insert(result.begin(),s2.size(),-1);
+        // result.insert(result.begin(),s2.size(),-1);
 
         for(size_t i = 1; i <= s2.size(); i++){
             if(temp != -1){
                 temp = s1.find(s2.substr(0,i));
             }               
-            result[i-1] = temp;
+            result.push_back(temp);
         }
         return result;
     }
