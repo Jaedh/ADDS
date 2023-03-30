@@ -17,7 +17,9 @@
             temp = s1.find(prefixes[i]);
             if (temp != string::npos) {
                 result[i] = temp;
-            }            
+            }else{
+                return result;
+            }          
         }
         return result;
     }
