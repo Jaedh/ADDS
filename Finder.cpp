@@ -11,6 +11,9 @@
 
         for(size_t i = 1; i <= s2.size(); i++){
             if(temp != -1){
+                if(i>2 && i < s2.size()){
+                    s1.erase(s1.begin()+result[i-1], s1.begin()+result[i]);
+                }                
                 temp = s1.find(s2.substr(0,i));
             }               
             result.push_back(temp);
