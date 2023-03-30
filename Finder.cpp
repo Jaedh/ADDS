@@ -15,11 +15,10 @@
 
         for(size_t i = 0; i <= prefixes.size(); i++){
             temp = s1.find(prefixes[i]);
-            if (temp != string::npos) {
-                result[i] = temp;
-            }else{
+            if (temp == string::npos) {
                 return result;
-            }          
+            }                  
+            result[i] = temp;
         }
         return result;
     }
