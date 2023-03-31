@@ -7,10 +7,10 @@
         result.reserve(s2.size());
         map<string, int> permuations;
 
-        for(int i=s1.size()-1; i >= 0; i--){
-            for(int j=s1.size()-i; j >= 1; j--){
+        for(size_t i=s1.size(); i >= 1; i--){
+            for(size_t j=s1.size()-i; j >= 1; j--){
                 // std::cout<<s1.substr(i,j)<<std::endl;
-                permuations[s1.substr(i,j)] = i;
+                permuations[s1.substr(i-1,j)] = i-1;
             }
             // std::cout<<std::endl;
         }
