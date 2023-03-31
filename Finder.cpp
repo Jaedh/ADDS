@@ -4,7 +4,6 @@
 
     vector<int> Finder::findSubstrings(string s1, string s2) {
         vector<int> result;
-        result.reserve(s2.size());
         map<string, size_t> permuations;
 
         for(size_t i=s1.size(); i >= 1; i--){
