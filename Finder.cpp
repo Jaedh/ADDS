@@ -4,11 +4,11 @@
 
     vector<int> Finder::findSubstrings(string s1, string s2) {
         vector<int> result;
-        size_t temp = 0;
+        size_t temp;
 
         for(size_t i = 1; i <= s2.size(); i++){
             if(temp != -1){             
-                temp = s1.find(s2.substr(temp,i));
+                temp = s1.find(s2.substr(0,i), i-1);
             }               
             result.push_back(temp);
         }
