@@ -1,6 +1,7 @@
 #include <iostream>
 #include "BubbleSort.h"
 #include "QuickSort.h"
+#include "RecursiveBinarySearch.h"
 #include <vector>
 
 int main(void){
@@ -8,6 +9,7 @@ int main(void){
 
     Sort* tool = new BubbleSort();
     Sort* tool2 = new QuickSort();
+    RecursiveBinarySearch* tool3 = new RecursiveBinarySearch();
 
     std::vector<int> result1 = tool->sort(a);
     for(auto& i : result1){
@@ -20,4 +22,7 @@ int main(void){
         std::cout<<i<<" ";
     }
     std::cout<<std::endl;
+
+    std::cout<<tool3->search(result1,6789)<<std::endl;
+
 }
