@@ -1,25 +1,26 @@
 #include "QuickSort.h"
 
 std::vector<int> QuickSort::sort(std::vector<int> list){
-    sortRec(list,0,list.size()-1);
-    return list;
+    std::vector<int> result = list;
+    sortRec(result,0,list.size()-1);
+    return result;
 }
 
 void QuickSort::sortRec(std::vector<int>& list, int start, int end){
-    if(start >= end){
-        return;
+    int pivot;
+    int pivot_index;     
+
+    if(start < end){
+        pivot = list[end];
+        pivot_index = start-1; 
+        for (int i = start; i <= end-1; i++){
+            if(list[i] < pivot){
+                pivot_index++;
+                std::swap(list[i], list[pivot_index]);
+            }
+        }               
+        std::swap(list[end], list[pivot_index+1]);
+        sortRec(list, start, pivot_index);
+        sortRec(list, pivot_index+2, end);
     }
-
-    int pivot = list.at(end);
-
-    int pivot_index = start;
-    for (int i = start; i < end; i++){
-        if(list.at(i) < pivot){
-            std::swap(list[i], list[pivot_index]);
-        }
-    }
-    std::swap(pivot, list[pivot_index]);
-
-    sortRec(list, start, pivot_index-1);
-    sortRec(list, pivot_index+1, end);
 }
