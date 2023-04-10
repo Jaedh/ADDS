@@ -24,7 +24,12 @@ int main(void){
     }
 
     vector<int> result = quickSort->sort(list);
-    cout<<binarysearch->search(result,1)<<" ";
+    bool resulttrue =binarysearch->search(result,1);
+    if(resulttrue == true){
+        cout<<"true"<<" ";
+    }else{
+        cout<<"false"<<" ";
+    }
 
     for(auto& i : result){
         std::cout<<i<<" ";
