@@ -1,18 +1,6 @@
 #include "RecursiveBinarySearch.h"
 
 bool RecursiveBinarySearch::search(std::vector<int> list, int n){
-    // if(list[0]==n){
-    //     return true;
-    // }else if(list[0]!=n){
-    //     return false;
-    // }
-
-    // int index = ((list.size()-1)/2);
-    // if(n<list.at(index)){
-    //     search(std::vector<int>(list.begin(),list.begin()+index-1),n);
-    // }else{
-    //     search(std::vector<int>(list.begin()+index, list.begin()+list.size()-1),n);
-    // }
     return searchRec(list, n, 0, list.size()-1);
 }
 
