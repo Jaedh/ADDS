@@ -61,13 +61,14 @@ int main(void){
     }
     std::cout<<std::endl;
 
-    for(auto& i: k){
-        std::cout<<i<<" ";
-    }
-    std::cout<<std::endl;
-
     std::list<int> r = j->add(k,k);     
     for(auto& i: r){
+        std::cout<<i<<" ";
+    }
+    std::cout<<std::endl;    
+
+    std::list<int> m = j->sub(r,k);     
+    for(auto& i: m){
         std::cout<<i<<" ";
     }
     std::cout<<std::endl;    

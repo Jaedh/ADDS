@@ -54,7 +54,37 @@ std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
 }
 
 std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
+    std::list<int> result;
+    int len = std::max(num1.size(), num2.size());
+    num1.reverse();
+    num2.reverse();
+    int overflow = 0;
+    int value = 0;
 
+    for (int i = 0; i < len - num1.size(); i++){
+        num1.push_back(0);
+    }
+    for (int i = 0; i < len - num2.size(); i++){
+        num2.push_back(0);
+    }
+
+
+    std::list<int>::iterator it1 = num1.begin();
+    std::list<int>::iterator it2 = num2.begin();
+    for (int i = 0; i < len; i++){
+        if(*it1 > *it2){
+            value = *it1 - *it2 - overflow;
+            overflow = 0;
+        }else{
+            value = *it1 + 10 - *it2 - overflow;
+            overflow = 1;
+        }
+        result.push_front(value);
+        ++it1;
+        ++it2;
+    }
+
+    return result;
 }
 
 std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
