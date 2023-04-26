@@ -72,7 +72,7 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
     std::list<int>::iterator it1 = num1.begin();
     std::list<int>::iterator it2 = num2.begin();
     for (int i = 0; i < len; i++){
-        if(*it1 > *it2){
+        if(*it1 - *it2 - overflow >= 0){
             value = *it1 - *it2 - overflow;
             overflow = 0;
         }else{
