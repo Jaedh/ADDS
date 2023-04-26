@@ -71,5 +71,12 @@ int main(void){
     for(auto& i: m){
         std::cout<<i<<" ";
     }
-    std::cout<<std::endl;    
+    std::cout<<std::endl;   
+
+    std::list<int> ko = j->buildBigNum("3");
+    std::list<int> op = j->mul(m,ko);
+    for(auto& i: op){
+        std::cout<<i<<" ";
+    }
+    std::cout<<std::endl; 
 }
