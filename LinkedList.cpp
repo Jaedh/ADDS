@@ -17,7 +17,14 @@ LinkedList::LinkedList(int* array, int len){
 }
 
 LinkedList::~LinkedList(){
-
+    Node* tail = head->link;
+    while(tail!=NULL){
+        Node* temp = tail;
+        tail= tail->link;
+        temp->~Node();
+    }
+    head->link=NULL;
+    head->~Node();
 }
 
 void LinkedList::insertPosition(int pos, int newNum){
