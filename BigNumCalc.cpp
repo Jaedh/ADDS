@@ -21,6 +21,12 @@ std::list<int> BigNumCalc::buildBigNum(std::string numString){
 }
 
 std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
+    if(num1.empty()){
+        return num2;
+    }else if(num2.empty()){
+        return num1;
+    }    
+
     std::list<int> result;
     int len = std::max(num1.size(), num2.size())+1;
     num1.reverse();
@@ -56,6 +62,12 @@ std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
 }
 
 std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
+    if(num1.empty()){
+        return num2;
+    }else if(num2.empty()){
+        return num1;
+    }    
+        
     std::list<int> result;
     int len = std::max(num1.size(), num2.size());
     num1.reverse();
@@ -88,6 +100,12 @@ std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2){
 }
 
 std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
+    if(num1.empty()){
+        return num2;
+    }else if(num2.empty()){
+        return num1;
+    }    
+        
     std::list<int> result;
     int len = std::max(num1.size(), num2.size())+1;
     num1.reverse();
