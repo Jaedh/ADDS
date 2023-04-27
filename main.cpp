@@ -77,15 +77,36 @@ int main(void){
     }
     std::cout<<std::endl;   
 
-    std::list<int> ko = j->buildBigNum("3");
-    std::list<int> op = j->mul(m,ko);
+    std::list<int> ko = j->buildBigNum("99");
+    std::list<int> ko1 = j->buildBigNum("123456789");
+    std::list<int> op = j->mul(ko1,ko);
+
+    for(auto& i: ko1){
+        std::cout<<i<<" ";
+    }
+    std::cout<<std::endl; 
+
     for(auto& i: op){
         std::cout<<i<<" ";
     }
     std::cout<<std::endl; 
 
-    std::list<int> t1 = j->buildBigNum("9876543210");
-    std::list<int> t2 = j->buildBigNum("9876543210");
 
-    std::cout<<int(' ')-48<<std::endl;
+    std::cout<<std::endl;     
+    std::list<int> k1o = j->buildBigNum("617283945");
+    std::list<int> k1o1 = j->buildBigNum("4938271560");
+    std::list<int> o1p = j->add(k1o1,k1o);
+
+    for(auto& i: o1p){
+        std::cout<<i<<" ";
+    }
+    std::cout<<std::endl;     
+
+    // std::list<int> t1 = j->buildBigNum("9876543210");
+    // std::list<int> t2 = j->buildBigNum("1234567890");
+    // std::list<int> t3 = j->sub(t1,t2);
+    // for(auto& i: t3){
+    //     std::cout<<i<<" ";
+    // }
+    // std::cout<<std::endl; 
 }
