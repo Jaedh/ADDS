@@ -13,7 +13,9 @@ BigNumCalc::~BigNumCalc(){
 std::list<int> BigNumCalc::buildBigNum(std::string numString){
     std::list<int> result;
     for (int i = 0; i < numString.size(); i++){
-        result.push_back(int(numString[i])-48);
+        if(isdigit(numString[i])){
+            result.push_back(int(numString[i])-48);
+        }
     }
     return result;
 }
