@@ -108,7 +108,7 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
     }    
         
     std::list<int> result;
-    int len = num1.size() + num2.size() + 1;
+    int len = num1.size();
     for (int i = 0; i < len+1; i++){
         result.push_back(0);
     }
@@ -137,15 +137,15 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
                 temp.push_back(0);
             }
         } 
-        temp2.clear();
-        temp2 = this->add(result,temp);
-        result = temp2;
-        
-        for(auto& i: temp){
+
+        for(auto& i: result){
             std::cout<<i<<" ";
         }
         std::cout<<std::endl;
 
+        temp2.clear();
+        temp2 = this->add(result,temp);
+        result = temp2;
         ++it2;
     }
     

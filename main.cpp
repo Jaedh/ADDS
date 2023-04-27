@@ -56,28 +56,28 @@ int main(void){
 
     // l->printList();
 
-    std::string a = "123456789";
+    // std::string a = "123456789";
     BigNumCalc* j = new BigNumCalc();
 
-    std::list<int> k = j->buildBigNum(a);
-    for(auto& i: k){
-        std::cout<<i<<" ";
-    }
-    std::cout<<std::endl;
+    // std::list<int> k = j->buildBigNum(a);
+    // for(auto& i: k){
+    //     std::cout<<i<<" ";
+    // }
+    // std::cout<<std::endl;
 
-    std::list<int> r = j->add(k,k);     
-    for(auto& i: r){
-        std::cout<<i<<" ";
-    }
-    std::cout<<std::endl;    
+    // std::list<int> r = j->add(k,k);     
+    // for(auto& i: r){
+    //     std::cout<<i<<" ";
+    // }
+    // std::cout<<std::endl;    
 
-    std::list<int> m = j->sub(r,k);     
-    for(auto& i: m){
-        std::cout<<i<<" ";
-    }
-    std::cout<<std::endl;   
+    // std::list<int> m = j->sub(r,k);     
+    // for(auto& i: m){
+    //     std::cout<<i<<" ";
+    // }
+    // std::cout<<std::endl;   
 
-    std::list<int> ko = j->buildBigNum("99");
+    std::list<int> ko = j->buildBigNum("999");
     std::list<int> ko1 = j->buildBigNum("123456789");
     std::list<int> op = j->mul(ko1,ko);
 
@@ -92,15 +92,15 @@ int main(void){
     std::cout<<std::endl; 
 
 
-    std::cout<<std::endl;     
-    std::list<int> k1o = j->buildBigNum("617283945");
-    std::list<int> k1o1 = j->buildBigNum("4938271560");
-    std::list<int> o1p = j->add(k1o1,k1o);
+    // std::cout<<std::endl;     
+    // std::list<int> k1o = j->buildBigNum("617283945");
+    // std::list<int> k1o1 = j->buildBigNum("4938271560");
+    // std::list<int> o1p = j->add(k1o1,k1o);
 
-    for(auto& i: o1p){
-        std::cout<<i<<" ";
-    }
-    std::cout<<std::endl;     
+    // for(auto& i: o1p){
+    //     std::cout<<i<<" ";
+    // }
+    // std::cout<<std::endl;     
 
     // std::list<int> t1 = j->buildBigNum("9876543210");
     // std::list<int> t2 = j->buildBigNum("1234567890");
