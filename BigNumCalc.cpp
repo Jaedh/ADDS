@@ -28,7 +28,7 @@ std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2){
     }    
 
     std::list<int> result;
-    int len = std::max(num1.size(), num2.size())+1;
+    int len = std::max(num1.size(), num2.size());
     num1.reverse();
     num2.reverse();
     int overflow = 0;
@@ -139,6 +139,10 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
         } 
 
         for(auto& i: result){
+            std::cout<<i<<" ";
+        }
+        std::cout<<"          ";
+        for(auto& i: temp){
             std::cout<<i<<" ";
         }
         std::cout<<std::endl;
