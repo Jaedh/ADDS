@@ -1,5 +1,4 @@
 #include "BigNumCalc.h"
-#include <iostream>
 #include <algorithm>
 
 BigNumCalc::BigNumCalc(){
