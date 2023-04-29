@@ -138,6 +138,15 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
             }
         } 
 
+        for(auto& i: result){
+            std::cout<<i<<" ";
+        }
+        std::cout<<"          ";
+        for(auto& i: temp){
+            std::cout<<i<<" ";
+        }
+        std::cout<<std::endl;
+
         temp2.clear();
         temp2 = this->add(result,temp);
         result = temp2;
@@ -152,3 +161,39 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
     }
     return result;
 }
+
+/*
+    if(num1.empty()){
+        return num2;
+    }else if(num2.empty()){
+        return num1;
+    }    
+        
+    std::list<int> result;
+    int len = std::max(num1.size(), num2.size())+1;
+    num1.reverse();
+    num2.reverse();
+    int overflow = 0;
+    int value = 0;
+
+    for (int i = 0; i < len - num1.size(); i++){
+        num1.push_back(0);
+    }
+
+    std::list<int>::iterator it1 = num1.begin();
+    std::list<int>::iterator it2 = num2.begin();
+    for (int i = 0; i < len; i++){
+        value = *it1 * *it2 + overflow;
+        result.push_front(value%10);
+        overflow = (value/10)%10;
+        ++it1;
+    }
+    
+    std::list<int>::iterator itr = result.begin();
+    while(itr!=result.end()&&*itr==0){
+        itr = result.erase(itr);
+        continue;
+        itr++;
+    }
+    return result;
+*/
