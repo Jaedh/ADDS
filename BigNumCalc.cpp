@@ -1,4 +1,5 @@
 #include "BigNumCalc.h"
+#include <iostream>
 #include <algorithm>
 
 BigNumCalc::BigNumCalc(){
@@ -136,6 +137,15 @@ std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2){
                 temp.push_back(0);
             }
         } 
+
+        for(auto& i: result){
+            std::cout<<i<<" ";
+        }
+        std::cout<<"          ";
+        for(auto& i: temp){
+            std::cout<<i<<" ";
+        }
+        std::cout<<std::endl;
 
         temp2.clear();
         temp2 = this->add(result,temp);
