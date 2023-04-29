@@ -97,7 +97,7 @@ int LinkedList::get(int pos){
     }
 
     if(pos < 1){
-        return std::numeric_limits<int>::min();
+        return std::numeric_limits<int>::max();
     }else if(pos > len){
         return std::numeric_limits<int>::max();
     }else{
