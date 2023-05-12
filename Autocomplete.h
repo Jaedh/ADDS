@@ -21,6 +21,7 @@ class Autocomplete{
         std::vector<std::string> getSuggestions(std::string partialWord);  // return the known words that start with partialWord
 
         void print();
+        void printAll(Node* node);
 
 };
 

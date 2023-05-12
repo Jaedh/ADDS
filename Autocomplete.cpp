@@ -43,7 +43,7 @@ void Autocomplete::insert(std::string word){
             temp = newNode;
         }
     }
-    std::cout<<"Done - insert"<<std::endl;
+    // std::cout<<"Done - insert"<<std::endl;
     
 }
 
@@ -67,6 +67,9 @@ std::vector<std::string> Autocomplete::getSuggestions(std::string partialWord){
 } 
 
 void Autocomplete::print(){
+    // std::cout<<std::endl;
+    // printAll(root);
+
     Node* temp = root;
     std::vector<Node* > temp_child;
 
@@ -79,4 +82,19 @@ void Autocomplete::print(){
         temp = temp_child.at(0);
     }
        
+
+}
+
+void Autocomplete::printAll(Node* temp){
+    std::vector<Node* > temp_child;
+    temp_child = temp->childNodes;
+
+    std::cout<<temp->data<<" ";
+    if(temp->isEnd){
+        std::cout<<std::endl;
+    }
+
+    for(auto& i : temp_child){
+        printAll(i);
+    }
 }
