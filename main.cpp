@@ -17,5 +17,5 @@ int main(void){
     }
 
     PrefixMatcher* p = new PrefixMatcher();
-    
+
 }

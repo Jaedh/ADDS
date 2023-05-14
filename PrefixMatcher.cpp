@@ -1,4 +1,4 @@
-#include <PrefixMatcher.h>
+#include "PrefixMatcher.h"
 #include <string>
 #include <algorithm>
 
@@ -11,7 +11,9 @@ PrefixMatcher::~PrefixMatcher(){
 }
 
 int PrefixMatcher::selectRouter(std::string networkAddress){
+    int result = 0;
 
+    return result;
 }
 
 void PrefixMatcher::selectRouterRecursion(Node* current, std::string networkAddress, std::vector<std::string>& adresses){
