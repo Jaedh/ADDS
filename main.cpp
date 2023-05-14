@@ -20,5 +20,13 @@ int main(void){
     a->insert("bandaid");
     a->insert("bandana");
 
-    a->print();
+    // a->print();
+
+    vector<string> result;
+
+    result = a->getSuggestions("band");
+
+    for(auto& i : result){
+        cout<<i<<endl;
+    }
 }

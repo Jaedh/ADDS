@@ -19,6 +19,7 @@ class Autocomplete{
 
         void insert(std::string word); // add a word to the known words
         std::vector<std::string> getSuggestions(std::string partialWord);  // return the known words that start with partialWord
+        void getSuggectionsRecursion(Node* current, std::string partialWord, std::vector<std::string>& suggestions);
 
         void print();
         void printAll(Node* node);

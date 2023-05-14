@@ -62,9 +62,32 @@ std::vector<std::string> Autocomplete::getSuggestions(std::string partialWord){
         }
     }
 
+    temp_child = temp->childNodes;
+    // std::string temp_string;
+
+    // for(auto& i: temp_child){
+
+    // }
+
+    // for(auto& i: temp_child){
+    //     std::cout<<i->data<<std::endl;
+    // }
+
+    getSuggectionsRecursion(temp,partialWord,result);
+
 
     return result;
 } 
+
+void Autocomplete::getSuggectionsRecursion(Node* current, std::string partialWord, std::vector<std::string>& suggestions){
+    if(current->isEnd){
+        suggestions.push_back(partialWord);
+    }
+
+    for(auto& i: current->childNodes){
+        getSuggectionsRecursion(i,partialWord+i->data,suggestions);
+    }
+}
 
 void Autocomplete::print(){
     // std::cout<<std::endl;
