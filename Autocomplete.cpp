@@ -38,12 +38,10 @@ void Autocomplete::insert(std::string word){
             }else{
                 newNode->isEnd = false;
             }
-            // newNode->childNodes.push_back(nullptr);
             tempPrevious->childNodes.push_back(newNode);
             temp = newNode;
         }
     }
-    // std::cout<<"Done - insert"<<std::endl;
     
 }
 
@@ -62,19 +60,7 @@ std::vector<std::string> Autocomplete::getSuggestions(std::string partialWord){
         }
     }
 
-    temp_child = temp->childNodes;
-    // std::string temp_string;
-
-    // for(auto& i: temp_child){
-
-    // }
-
-    // for(auto& i: temp_child){
-    //     std::cout<<i->data<<std::endl;
-    // }
-
     getSuggectionsRecursion(temp,partialWord,result);
-
 
     return result;
 } 
