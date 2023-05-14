@@ -1,6 +1,7 @@
 #include "PrefixMatcher.h"
 #include <string>
 #include <algorithm>
+#include <iostream>
 
 PrefixMatcher::PrefixMatcher(){
     root = new Node();
@@ -28,8 +29,14 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
 
     selectRouterRecursion(temp,networkAddress,adresses);
 
-    std::string adress = adresses.at(0);
+    auto it = std::max_element(adresses.begin(), adresses.end(),[](const auto& a, const auto& b) {return a.size() < b.size();});
+
+    std::string adress = *it;
     result = routers[adress];
+
+    // for (auto const &pair: routers) {
+    //     std::cout << "{" << pair.first << ": " << pair.second << "}\n";
+    // }
 
     return result;
 }
