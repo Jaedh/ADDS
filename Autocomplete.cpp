@@ -5,7 +5,7 @@
 
 
 Autocomplete::Autocomplete(){
-        root = new Node();
+    root = new Node();
 }
 
 Autocomplete::~Autocomplete(){
