@@ -23,5 +23,6 @@ int main(void){
     p->insert("10000",3);
 
     cout<<p->selectRouter("100001010101")<<endl;
+    cout<<p->selectRouter("10")<<endl;
 
 }
