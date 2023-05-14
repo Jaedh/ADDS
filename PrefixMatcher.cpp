@@ -12,31 +12,48 @@ PrefixMatcher::~PrefixMatcher(){
 }
 
 int PrefixMatcher::selectRouter(std::string networkAddress){
-    int result = 0;
-    std::vector<std::string> adresses;
+    int result = -1;
     Node* temp = root;
     std::vector<Node* > temp_child;
-    int length = networkAddress.length();
 
-    for (int i = 0; i < length; i++){
+    for(auto& i: networkAddress){
         temp_child = temp->childNodes;
         for(auto& j: temp_child){
-            if(j->data == networkAddress[i]){
+            if(j->data==i){
                 temp=j;
+            }
+            if(temp->isEnd){
+                result = temp->routerID;
             }
         }
     }
 
-    selectRouterRecursion(temp,networkAddress,adresses);
+    // std::string longestPrefix = "";
+    // std::vector<std::string> adresses;
+    // std::vector<Node* > temp_child;
+    // int length = networkAddress.length();
 
-    auto it = std::max_element(adresses.begin(), adresses.end(),[](const auto& a, const auto& b) {return a.size() < b.size();});
+    
+    //     longestPrefix+=temp->data; 
+    //     for (int i = 0; i < length; i++){
+    //         temp_child = temp->childNodes;
+    //         for(auto& j: temp_child){
+    //             if(j->data == networkAddress[i]){
+    //                 temp=j;
+    //                 longestPrefix+=temp->data;
+    //             }
+    //         }
+    //     }
 
-    std::string adress = *it;
-    result = routers[adress];
+    //     std::cout<<longestPrefix<<std::endl;
+    //     std::cout<<longestPrefix.compare("1000")<<std::endl;
 
-    // for (auto const &pair: routers) {
-    //     std::cout << "{" << pair.first << ": " << pair.second << "}\n";
-    // }
+    //     for (auto const &pair: routers) {
+    //         std::cout << "{" << pair.first << ": " << pair.second << "}\n";
+    //     }
+
+    // std::cout<<routers[longestPrefix]<<std::endl;
+    // std::cout<<routers["1000"]<<std::endl;
 
     return result;
 }
@@ -76,6 +93,7 @@ void PrefixMatcher::insert(std::string address, int routerNumber){
             newNode->data = address[i];
             if(i==length-1){
                 newNode->isEnd = true;
+                newNode->routerID = routerNumber;
             }else{
                 newNode->isEnd = false;
             }

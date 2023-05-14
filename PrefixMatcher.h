@@ -11,6 +11,7 @@ class PrefixMatcher{
             bool isEnd;
             char data;
             std::vector<Node* > childNodes;
+            int routerID;
         };
         Node *root;
         std::map<std::string, int> routers;

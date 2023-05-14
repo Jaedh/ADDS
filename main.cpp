@@ -18,10 +18,10 @@ int main(void){
 
     PrefixMatcher* p = new PrefixMatcher();
 
-    p->insert("0010101011010",1);
-    p->insert("0010101011010101",2);
-    p->insert("001010101101011111111",3);
+    p->insert("100",1);
+    p->insert("1000",2);
+    p->insert("10000",3);
 
-    cout<<p->selectRouter("001010101")<<endl;
+    cout<<p->selectRouter("100001010101")<<endl;
 
 }
