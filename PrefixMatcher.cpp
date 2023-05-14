@@ -12,6 +12,24 @@ PrefixMatcher::~PrefixMatcher(){
 
 int PrefixMatcher::selectRouter(std::string networkAddress){
     int result = 0;
+    std::vector<std::string> adresses;
+    Node* temp = root;
+    std::vector<Node* > temp_child;
+    int length = networkAddress.length();
+
+    for (int i = 0; i < length; i++){
+        temp_child = temp->childNodes;
+        for(auto& j: temp_child){
+            if(j->data == networkAddress[i]){
+                temp=j;
+            }
+        }
+    }
+
+    selectRouterRecursion(temp,networkAddress,adresses);
+
+    std::string adress = adresses.at(0);
+    result = routers[adress];
 
     return result;
 }
