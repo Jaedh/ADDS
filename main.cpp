@@ -21,7 +21,7 @@ int main(void){
     p->insert("10",1);
     p->insert("100",2);
     p->insert("1000",3);
-    p->insert("10010",3);
+    p->insert("10010",4);
 
     cout<<p->selectRouter("100101")<<endl;
     cout<<p->selectRouter("1000")<<endl;

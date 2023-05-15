@@ -11,7 +11,8 @@ class PrefixMatcher{
             bool isEnd;
             char data;
             std::vector<Node* > childNodes;
-            int routerID = -1;
+            int routerID;
+            int depth;
         };
         Node *root;
         std::map<std::string, int> routers;
