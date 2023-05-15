@@ -22,7 +22,7 @@ int main(void){
     p->insert("10000111",4);
     p->insert("1000010",3);
 
-    cout<<p->selectRouter("100001")<<endl;
+    cout<<p->selectRouter("10000111110")<<endl;
     // cout<<p->selectRouter("10")<<endl;
 
 }

@@ -18,6 +18,15 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
 
     for(auto& i: networkAddress){
         temp_child = temp->childNodes;
+        // int a = i - '0';
+        // if(!temp->childNodes[a]){
+        //     break;
+        // }
+        // temp = temp->childNodes[a];
+        // if(temp->routerID!=-1){
+        //     result = temp->routerID;
+        // }
+
         for(auto& j: temp_child){
             if(j->data==i){
                 temp=j;
@@ -28,55 +37,29 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
         }
     }
 
-    if(!temp->isEnd){
-        temp = root;
-        std::vector<std::string> string_addresses;
-        int length = networkAddress.length();
+    // if(!temp->isEnd){
+    //     temp = root;
+    //     std::vector<std::string> string_addresses;
+    //     int length = networkAddress.length();
 
-        for (int i = 0; i < length; i++){
-            temp_child = temp->childNodes;
-            for(auto& j: temp_child){
-                if(j->data == networkAddress[i]){
-                    temp=j;
-                }
-            }
-        }
-
-        selectRouterRecursion(temp,networkAddress,string_addresses);
-
-        auto it = std::max_element(string_addresses.begin(), string_addresses.end(),
-                                [](const auto& a, const auto& b) {
-                                    return a.size() < b.size();
-                                });      
-                                result = routers[*it];  
-    }
-
-    // std::string longestPrefix = "";
-    // std::vector<std::string> adresses;
-    // std::vector<Node* > temp_child;
-    // int length = networkAddress.length();
-
-    
-    //     longestPrefix+=temp->data; 
     //     for (int i = 0; i < length; i++){
     //         temp_child = temp->childNodes;
     //         for(auto& j: temp_child){
     //             if(j->data == networkAddress[i]){
     //                 temp=j;
-    //                 longestPrefix+=temp->data;
     //             }
     //         }
     //     }
 
-    //     std::cout<<longestPrefix<<std::endl;
-    //     std::cout<<longestPrefix.compare("1000")<<std::endl;
+    //     selectRouterRecursion(temp,networkAddress,string_addresses);
 
-    //     for (auto const &pair: routers) {
-    //         std::cout << "{" << pair.first << ": " << pair.second << "}\n";
-    //     }
+    //     auto it = std::max_element(string_addresses.begin(), string_addresses.end(),
+    //                             [](const auto& a, const auto& b) {
+    //                                 return a.size() < b.size();
+    //                             });      
+    //                             result = routers[*it];  
+    // }
 
-    // std::cout<<routers[longestPrefix]<<std::endl;
-    // std::cout<<routers["1000"]<<std::endl;
 
     return result;
 }
