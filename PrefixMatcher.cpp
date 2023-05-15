@@ -21,15 +21,6 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
 
     for(auto& i: networkAddress){
         temp_child = temp->childNodes;
-        // int a = i - '0';
-        // if(!temp->childNodes[a]){
-        //     break;
-        // }
-        // temp = temp->childNodes[a];
-        // if(temp->routerID!=-1){
-        //     result = temp->routerID;
-        // }
-
         for(auto& j: temp_child){
             if(j->data==i){
                 temp=j;
@@ -53,30 +44,6 @@ int PrefixMatcher::selectRouter(std::string networkAddress){
         }
         result = addresses_router.at(index); 
     }
-
-    // if(!temp->isEnd){
-    //     temp = root;
-    //     std::vector<std::string> string_addresses;
-    //     int length = networkAddress.length();
-
-    //     for (int i = 0; i < length; i++){
-    //         temp_child = temp->childNodes;
-    //         for(auto& j: temp_child){
-    //             if(j->data == networkAddress[i]){
-    //                 temp=j;
-    //             }
-    //         }
-    //     }
-
-    //     selectRouterRecursion(temp,networkAddress,string_addresses);
-
-    //     auto it = std::max_element(string_addresses.begin(), string_addresses.end(),
-    //                             [](const auto& a, const auto& b) {
-    //                                 return a.size() < b.size();
-    //                             });      
-    //                             result = routers[*it];  
-    // }
-
 
     return result;
 }
