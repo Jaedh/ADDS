@@ -58,8 +58,7 @@ template <typename T>
 void Heap<T>::insert(T value) {
     values.push_back(value);
     int initial_parent_index = floor((values.size()-1) / 2);
-    for (int parent_index = initial_parent_index; parent_index >= 0;
-        parent_index--) {
+    for (int parent_index = initial_parent_index; parent_index >= 0; parent_index--) {
       heapify(parent_index);
     }    
 }
@@ -70,7 +69,15 @@ void Heap<T>::insert(T value) {
 
 template <typename T>
 void Heap<T>::remove(T value) {
-  // TO BE IMPLEMENTED
+    for (int i = 0; i < values.size(); i++){
+        if(values.at(i)==value){
+          values.erase(values.begin()+i);
+        }
+    }
+    int initial_parent_index = floor((values.size()-1) / 2);
+    for (int parent_index = initial_parent_index; parent_index >= 0; parent_index--) {
+      heapify(parent_index);
+    }     
 }
 
 /*******************************/

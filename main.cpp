@@ -11,5 +11,7 @@ int main(void){
     h->insert(10);
     h->insert(-1);
     cout<<h->getMin()<<endl;
+    h->remove(-1);
+    cout<<h->getMin()<<endl;
 
 }
