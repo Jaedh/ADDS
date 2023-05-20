@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Heap.tpp"
+#include "klargest.cpp"
 #include <vector>
 
 using namespace std;
@@ -14,4 +15,5 @@ int main(void){
     h->remove(-1);
     cout<<h->getMin()<<endl;
 
+    cout<<kth_largest(values,4)<<endl;
 }
