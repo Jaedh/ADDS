@@ -16,6 +16,7 @@ Patron::~Patron(){
 
 }
 
+// This function checks if the patron doesnt already have a document borrowed and if it doesnt it adds the document as a varible in this class.
 bool Patron::addDoc(Document* _doc){
     if(!hasBorrowed){
         doc = _doc;
@@ -29,6 +30,7 @@ Document* Patron::getDoc(){
     return doc;
 }
 
+// sets the patron to not currently have anything borrowed and resets the document variable
 void Patron::removeDoc(){
     hasBorrowed = false;
     doc = new Document();

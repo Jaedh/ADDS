@@ -30,6 +30,7 @@ int Document::getLicence_limit(){
     return licence_limit;
 }
 
+// this function reduced the index of the borrowed variable every time its run and returns true if its is above 0 and if its below zero the false
 bool Document::borrow(){
     borrowed-=1;
     if(borrowed<0){
@@ -39,6 +40,7 @@ bool Document::borrow(){
     return true;
 }
 
+// this function does the inverse of the above function essentially adding to the counter since there ie more documents to remove
 bool Document::Return(){
     borrowed+=1;
     if(borrowed>licence_limit){
