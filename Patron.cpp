@@ -15,8 +15,10 @@ Patron::~Patron(){
 }
 
 void Patron::addDoc(Document* _doc){
-    doc = _doc;
-    hasBorrowed = true;
+    if(!hasBorrowed){
+        doc = _doc;
+        hasBorrowed = true;
+    }
 }
 
 Document* Patron::getDoc(){

@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "DocumentManager.h"
+#include "Patron.h"
 
 using namespace std;
 
