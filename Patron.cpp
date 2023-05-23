@@ -3,11 +3,13 @@
 Patron::Patron(){
     ID = 0;
     hasBorrowed = false;
+    doc = new Document();
 }
 
 Patron::Patron(int _ID){
     ID = _ID;
     hasBorrowed = false;
+    doc = new Document();
 }
 
 Patron::~Patron(){
@@ -28,5 +30,9 @@ Document* Patron::getDoc(){
 void Patron::removeDoc(){
     hasBorrowed = false;
     doc = new Document();
+}
+
+int Patron::getID(){
+    return ID;
 }
 

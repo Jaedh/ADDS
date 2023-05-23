@@ -2,11 +2,17 @@
 #define DOCUMENTMANAGER_H
 
 #include <string>
+#include <map>
+#include <vector>
+
 #include "Document.h"
+#include "Patron.h"
 
 class DocumentManager{
     private:
-
+        std::map<std::string, Document*> documents_name;
+        std::map<int, Document*> documents_id;
+        std::map<int, Patron*> patrons;
     public:
         DocumentManager();
         ~DocumentManager();

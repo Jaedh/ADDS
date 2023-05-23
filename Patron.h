@@ -16,6 +16,7 @@ class Patron{
         void addDoc(Document* _doc);
         Document* getDoc();
         void removeDoc();
+        int getID();
 };
 
 #endif
