@@ -30,9 +30,17 @@ int main(void){
     // cout<<aaa->search("doc2")<<endl;
 
     cout<<aaa->borrowDocument(01,100)<<endl;
+    cout<<aaa->borrowDocument(01,100)<<endl;
+    cout<<aaa->borrowDocument(01,100)<<endl;
     cout<<aaa->borrowDocument(02,100)<<endl;
     cout<<aaa->borrowDocument(01,101)<<endl;
     cout<<aaa->borrowDocument(02,101)<<endl;
+
+    cout<<endl;
+
+    aaa->returnDocument(01,100);
+    cout<<aaa->borrowDocument(01,100)<<endl;
+    cout<<aaa->borrowDocument(01,100)<<endl;
 
 
 }

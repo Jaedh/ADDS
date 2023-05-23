@@ -10,17 +10,17 @@
 
 class DocumentManager{
     private:
-        std::map<std::string, Document*> documents_name;
-        std::map<int, Document*> documents_id;
-        std::map<int, Patron*> patrons;
+        std::map<std::string, Document*> documents_name;        //map to connect the documents name as a key to the document object
+        std::map<int, Document*> documents_id;                  //map to connect the documents ID as a key to the document object
+        std::map<int, Patron*> patrons;                         //map to connect the patrons ID as a key to the patron object
     public:
         DocumentManager();
         ~DocumentManager();
 
         void addDocument(std::string name, int id, int license_limit);
         void addPatron(int patronID);
-        int search(std::string name); // returns docid if name is in the document collection or 0 if the name is not in the collection
-        bool borrowDocument(int docid, int patronID);  // returns true if document is borrowed, false if it can not be borrowed (invalid patronid or the number of copies current borrowed has reached the license limit)
+        int search(std::string name);
+        bool borrowDocument(int docid, int patronID);
         void returnDocument(int docid, int patronID);
 };
 

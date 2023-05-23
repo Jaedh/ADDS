@@ -8,7 +8,7 @@ class Document{
         std::string name;
         int ID;
         int licence_limit;
-        int borrowed;
+        int borrowed;       //value that indexes how many copies are left to be borrowed
     public:
         Document();
         Document(std::string _name, int _ID, int _licence_limit);

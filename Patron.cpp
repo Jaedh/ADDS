@@ -16,11 +16,13 @@ Patron::~Patron(){
 
 }
 
-void Patron::addDoc(Document* _doc){
+bool Patron::addDoc(Document* _doc){
     if(!hasBorrowed){
         doc = _doc;
         hasBorrowed = true;
+        return true;
     }
+    return false;
 }
 
 Document* Patron::getDoc(){

@@ -13,7 +13,7 @@ class Patron{
         Patron(int _ID);
         ~Patron();
 
-        void addDoc(Document* _doc);
+        bool addDoc(Document* _doc);
         Document* getDoc();
         void removeDoc();
         int getID();

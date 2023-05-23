@@ -28,19 +28,20 @@ int DocumentManager::search(std::string name){
 } 
 
 bool DocumentManager::borrowDocument(int docid, int patronID){
+    bool patronFull;
     if(documents_id.find(docid)== documents_id.end() || patrons.find(patronID)==patrons.end()){
         return false;
     }
-    
+
     Document* temp_doc = documents_id[docid];
     Patron* temp_patron = patrons[patronID];
 
     bool canBorrow = temp_doc->borrow();
 
     if(canBorrow){
-        temp_patron->addDoc(temp_doc);
+        patronFull = temp_patron->addDoc(temp_doc);
     }
-    return canBorrow;
+    return canBorrow&patronFull;
 }  
 
 void DocumentManager::returnDocument(int docid, int patronID){
