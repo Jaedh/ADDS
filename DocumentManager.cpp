@@ -46,5 +46,7 @@ bool DocumentManager::borrowDocument(int docid, int patronID){
 
 void DocumentManager::returnDocument(int docid, int patronID){
     Patron* temp_patron = patrons[patronID];
+    Document* temp_doc = documents_id[docid];
     temp_patron->removeDoc();    
+    temp_doc->Return();
 }
