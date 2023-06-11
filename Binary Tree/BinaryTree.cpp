@@ -13,15 +13,26 @@ BinaryTree::~BinaryTree(){
 void BinaryTree::addNode(int _value){
     if(root==NULL){
         root = new Node(_value);
+        return;
     }
 
     Node* temp = root;
 
     while(temp!=NULL){
         if(_value > temp->data){
-            temp = temp->right;
+            if(temp->right!=NULL){
+                temp = temp->right;
+            }else{
+                temp->right= new Node(_value);
+                break;
+            }
         }else{
-            temp = temp->left;
+            if(temp->left!=NULL){
+                temp = temp->left;
+            }else{
+                temp->left= new Node(_value);
+                break;
+            }
         }
     }
 }
@@ -33,5 +44,25 @@ void BinaryTree::preorder(Node* node){
 
     std::cout<<node->data<<"-> ";
     preorder(node->left);
+    preorder(node->right);
+}
+
+void BinaryTree::postorder(Node* node){
+    if(node == NULL){
+        return ;
+    }
+
+    preorder(node->left);
+    preorder(node->right);
+    std::cout<<node->data<<"-> ";
+}
+
+void BinaryTree::inorder(Node* node){
+    if(node == NULL){
+        return ;
+    }
+
+    preorder(node->left);
+    std::cout<<node->data<<"-> ";    
     preorder(node->right);
 }

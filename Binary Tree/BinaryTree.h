@@ -13,6 +13,8 @@ class BinaryTree{
         void addNode(int _value);
 
         void preorder(Node* node);
+        void inorder(Node* node);
+        void postorder(Node* node);
 
 };
 
